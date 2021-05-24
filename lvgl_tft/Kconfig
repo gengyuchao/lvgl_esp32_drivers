@@ -68,6 +68,10 @@ menu "LVGL TFT Display controller"
             bool "TTGO Camera Plus"
             select LV_TFT_DISPLAY_CONTROLLER_ST7789
             select LV_TFT_DISPLAY_PROTOCOL_SPI
+        config LV_PREDEFINED_DISPLAY_TTGO_WATCH
+            bool "TTGO Watch 2020"
+            select LV_TFT_DISPLAY_CONTROLLER_ST7789
+            select LV_TFT_DISPLAY_PROTOCOL_SPI
         config LV_PREDEFINED_DISPLAY_WT32_SC01
             bool "Wireless Tag WT32-SC01"
             select LV_TFT_DISPLAY_CONTROLLER_ST7796S
@@ -768,6 +772,7 @@ menu "LVGL TFT Display controller"
             default 23 if LV_PREDEFINED_PINS_TKOALA
             default 19 if LV_PREDEFINED_DISPLAY_TTGO
             default 19 if LV_PREDEFINED_DISPLAY_TTGO_CAMERA_PLUS
+            default 19 if LV_PREDEFINED_DISPLAY_TTGO_WATCH
             default 13 if LV_PREDEFINED_DISPLAY_WT32_SC01
             default 13
 
@@ -837,6 +842,7 @@ menu "LVGL TFT Display controller"
             default 18 if LV_PREDEFINED_PINS_TKOALA
             default 18 if LV_PREDEFINED_DISPLAY_TTGO
             default 21 if LV_PREDEFINED_DISPLAY_TTGO_CAMERA_PLUS
+            default 18 if LV_PREDEFINED_DISPLAY_TTGO_WATCH
             default 14 if LV_PREDEFINED_DISPLAY_WT32_SC01
             default 14
 
@@ -865,6 +871,7 @@ menu "LVGL TFT Display controller"
             default 26 if LV_PREDEFINED_DISPLAY_ATAG
             default 5 if LV_PREDEFINED_DISPLAY_TTGO
             default 12 if LV_PREDEFINED_DISPLAY_TTGO_CAMERA_PLUS
+            default 5 if LV_PREDEFINED_DISPLAY_TTGO_WATCH
             default 15 if LV_PREDEFINED_DISPLAY_WT32_SC01
             default 15
 
@@ -895,6 +902,7 @@ menu "LVGL TFT Display controller"
             default 17 if LV_PREDEFINED_DISPLAY_ATAG
             default 16 if LV_PREDEFINED_DISPLAY_TTGO
             default 15 if LV_PREDEFINED_DISPLAY_TTGO_CAMERA_PLUS
+            default 27 if LV_PREDEFINED_DISPLAY_TTGO_WATCH
             default 2
 
             help
@@ -915,6 +923,7 @@ menu "LVGL TFT Display controller"
             default 16 if LV_PREDEFINED_DISPLAY_ATAG
             default 23 if LV_PREDEFINED_DISPLAY_TTGO
             default 33 if LV_PREDEFINED_DISPLAY_TTGO_CAMERA_PLUS
+            default -1 if LV_PREDEFINED_DISPLAY_TTGO_WATCH
             default 22 if LV_PREDEFINED_DISPLAY_WT32_SC01
             default 4
 
@@ -941,6 +950,7 @@ menu "LVGL TFT Display controller"
             default y if LV_PREDEFINED_DISPLAY_ERTFT0356
             default y if LV_PREDEFINED_DISPLAY_TTGO
             default y if LV_PREDEFINED_DISPLAY_TTGO_CAMERA_PLUS
+            default y if LV_PREDEFINED_DISPLAY_TTGO_WATCH
             default y if LV_PREDEFINED_DISPLAY_WT32_SC01
             help
                 Enable controlling the display backlight using an GPIO
@@ -952,6 +962,7 @@ menu "LVGL TFT Display controller"
             default y if LV_PREDEFINED_DISPLAY_ERTFT0356
             default y if LV_PREDEFINED_DISPLAY_TTGO
             default y if LV_PREDEFINED_DISPLAY_TTGO_CAMERA_PLUS
+            default y if LV_PREDEFINED_DISPLAY_TTGO_WATCH
             default y if LV_PREDEFINED_DISPLAY_WT32_SC01
             help
                 Some backlights are turned on with a high signal, others held low.
@@ -973,6 +984,7 @@ menu "LVGL TFT Display controller"
             default 0  if LV_PREDEFINED_PINS_TKOALA
             default 4 if LV_PREDEFINED_DISPLAY_TTGO
             default 2 if LV_PREDEFINED_DISPLAY_TTGO_CAMERA_PLUS
+            default 12 if LV_PREDEFINED_DISPLAY_TTGO_WATCH
             default 23 if LV_PREDEFINED_DISPLAY_WT32_SC01
             default 27
 
